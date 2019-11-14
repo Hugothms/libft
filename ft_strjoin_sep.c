@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin_sep.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
+/*   By: hthomas <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/10 17:29:35 by hthomas           #+#    #+#             */
-/*   Updated: 2019/11/13 09:03:12 by hthomas          ###   ########.fr       */
+/*   Updated: 2019/09/10 17:29:42 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		count(int size, char **strs, char *sep)
+int		count(int size, char **strs, char *sep)
 {
 	int	i;
 	int	j;
@@ -35,7 +35,7 @@ static int		count(int size, char **strs, char *sep)
 	return ((k * (size - 1)) + cpt + 1);
 }
 
-static char	*join(int size, char **strs, char *res, char *sep)
+char	*join(int size, char **strs, char *res, char *sep)
 {
 	int	l;
 	int	i;
@@ -60,7 +60,7 @@ static char	*join(int size, char **strs, char *res, char *sep)
 	return (res);
 }
 
-char			*ft_strjoin_sep(int size, char **strs, char *sep)
+char	*ft_strjoin_sep(int size, char **strs, char *sep)
 {
 	char	*res;
 

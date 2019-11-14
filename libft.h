@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 13:02:45 by hthomas           #+#    #+#             */
-/*   Updated: 2019/11/12 17:11:44 by hthomas          ###   ########.fr       */
+/*   Updated: 2019/11/13 12:29:07 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,6 @@ char				*ft_strmap(char const *s, char (*f)(char));
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char				*ft_substr(char const *s, unsigned int start, size_t len);
 char				**ft_split(char const *s, char c1);
-char				**ft_nsplit(char const *s, char *charset);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s1, char const *set);
 void				*ft_calloc(size_t count, size_t size);
@@ -78,5 +77,14 @@ void				ft_lstclear(t_list **lst, void (*del)(void*));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 					void (*del)(void *));
+char				**ft_nsplit(const char *str, char *charset);
+void				ft_putchar(int c);
+void				ft_putnbr(int nb);
+void				ft_putstr(const char *str);
+char				*ft_strcat(char *dst, const char *src);
+int					ft_strcmp(const char *s1, const char *s2);
+char				*ft_strjoin_sep(int size, char **strs, char *sep);
+char				*ft_strmap(char const *s, char (*f)(char));
+char				*ft_strstr(const char *haystack, const char *needle);
 
 #endif

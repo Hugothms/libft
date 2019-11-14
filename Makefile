@@ -6,13 +6,14 @@
 #    By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/04 11:49:24 by hthomas           #+#    #+#              #
-#    Updated: 2019/11/12 17:37:53 by hthomas          ###   ########.fr        #
+#    Updated: 2019/11/13 12:26:01 by hthomas          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME 		= 	libft.a
 OBJS		=	${SRCS:.c=.o}
 OBJS_BONUS	=	${SRCS_BONUS:.c=.o}
+OBJS_BBONUS	=	${SRCS_BBONUS:.c=.o}
 INCLUDES	=	libft.h
 CC			=	gcc
 CFLAGS		=	-Wall -Wextra -Werror
@@ -67,12 +68,15 @@ SRCS_BBONUS	=	ft_putchar.c		\
 				ft_strcmp.c			\
 				ft_strstr.c			\
 				ft_strcat.c			\
-				ft_strmap.c
+				ft_strmap.c			\
+				ft_nsplit.c			\
+				ft_strjoin_sep.c
+
 
 all:		$(NAME)
 
-$(NAME):	${OBJS}
-	ar rc	$(NAME) ${OBJS}
+$(NAME):	${OBJS} ${OBJS_BONUS} ${OBJS_BBONUS}
+	ar rc	$(NAME) ${OBJS} ${OBJS_BONUS} ${OBJS_BBONUS}
 	ranlib	$(NAME)
 
 bonus: ${OBJS} ${OBJS_BONUS}
