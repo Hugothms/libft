@@ -6,7 +6,7 @@
 #    By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/04 11:49:24 by hthomas           #+#    #+#              #
-#    Updated: 2019/11/13 12:26:01 by hthomas          ###   ########.fr        #
+#    Updated: 2019/11/18 09:52:46 by hthomas          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -87,7 +87,7 @@ bonus: ${OBJS} ${OBJS_BONUS}
 	${CC} ${CFLAGS} -I $(INCLUDES) -c $< -o ${<:.c=.o}
 
 clean:
-	rm -f $(OBJS) ${OBJS_BONUS}
+	rm -f $(OBJS) ${OBJS_BONUS} ${OBJS_BBONUS}
 
 fclean:		clean
 	rm -f $(NAME)
@@ -95,9 +95,3 @@ fclean:		clean
 re:			fclean all
 
 .PHONY:		all clean fclean re
-
-test: test$(FUNCTION)
-
-test$(FUNCTION):
-	${CC} -o $(FUNCTION).out -I . ft_$(FUNCTION).c test/test_$(FUNCTION).c
-	./$(FUNCTION).out
