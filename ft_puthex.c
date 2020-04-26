@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_puthex.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/28 20:08:37 by hthomas           #+#    #+#             */
-/*   Updated: 2020/02/21 16:44:12 by hthomas          ###   ########.fr       */
+/*   Created: 2019/11/06 16:29:00 by hthomas           #+#    #+#             */
+/*   Updated: 2019/12/05 16:45:34 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strcmp(const char *s1, const char *s2)
+void	ft_puthex(unsigned int hex, int upper)
 {
-	unsigned int	i;
+	char	c;
 
-	i = 0;
-	if (s1 == s2)
-		return (0);
-	while (s1[i] && s2[i] && s1[i] == s2[i])
-		i++;
-	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+	c = (upper ? 'A' : 'a');
+	if (hex < 16)
+		ft_putchar(hex + ((hex < 10) ? '0' : c - 10));
+	else
+	{
+		ft_puthex(hex / 16, upper);
+		ft_putchar(hex % 16 + (hex % 16 < 10 ? '0' : c - 10));
+	}
 }

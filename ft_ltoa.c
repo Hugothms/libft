@@ -1,16 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_ltoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 16:26:35 by hthomas           #+#    #+#             */
-/*   Updated: 2020/02/06 15:58:15 by hthomas          ###   ########.fr       */
+/*   Updated: 2019/12/04 20:28:33 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static int	ft_count_len_nbr_l(long n)
+{
+	int	res;
+
+	res = 0;
+	if (n == 0)
+		return (1);
+	while (n)
+	{
+		res++;
+		n /= 10;
+	}
+	return (res);
+}
 
 static char	*ft_strrev(char *str)
 {
@@ -20,8 +35,6 @@ static char	*ft_strrev(char *str)
 
 	i = 0;
 	j = 0;
-	if (str[i] == '-')
-		i++;
 	while (str[j])
 		j++;
 	j--;
@@ -36,15 +49,10 @@ static char	*ft_strrev(char *str)
 	return (str);
 }
 
-static void	fill_str(char *str, int n, int i)
+static void	fill_str(char *str, long n, int i)
 {
 	if (n == 0)
 		str[i++] = '0';
-	if (n < 0)
-	{
-		str[i++] = '-';
-		n *= -1;
-	}
 	while (n)
 	{
 		str[i++] = n % 10 + '0';
@@ -53,22 +61,16 @@ static void	fill_str(char *str, int n, int i)
 	str[i] = '\0';
 }
 
-char		*ft_itoa(int n)
+char		*ft_ltoa(long n)
 {
 	char	*str;
 	int		i;
 	int		nblen;
 
 	i = 0;
-	nblen = ft_nbrlen(n);
+	nblen = ft_count_len_nbr_l(n);
 	if (!(str = malloc((nblen + 1) * sizeof(char))))
 		return (NULL);
-	if (n == -2147483648)
-	{
-		str[i++] = '-';
-		str[i++] = '8';
-		n /= -10;
-	}
 	fill_str(str, n, i);
 	return (ft_strrev(str));
 }
