@@ -1,3 +1,3 @@
-# Libft
+#Libft
 Your very first own library  
-This project is your very first project as a student at 42. You will need to recode a few functions of the C standard library as well as some other utility functions that you will use during your whole cursus.
+Summary: The aim of this project is to code a C library regrouping usual functions that you’ll be allowed to use in all your other projects.
