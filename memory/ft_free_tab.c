@@ -1,34 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi_strict.c                                   :+:      :+:    :+:   */
+/*   ft_free_tab.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/04 16:04:54 by hthomas           #+#    #+#             */
-/*   Updated: 2020/04/14 20:09:02 by hthomas          ###   ########.fr       */
+/*   Created: 2020/09/18 15:58:38 by hthomas           #+#    #+#             */
+/*   Updated: 2020/09/18 16:07:14 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi_strict(const char *nptr)
+void	ft_free_tab(char **tab)
 {
-	int	res;
-	int	sign;
-
-	res = 0;
-	sign = 1;
-	while ((*nptr >= '\t' && *nptr <= '\r') || *nptr == ' ')
-		nptr++;
-	if (*nptr == '+' || *nptr == '-')
-		sign *= (*nptr++ == '-' ? -1 : 1);
-	while ((*nptr >= '0' && *nptr <= '9') || *nptr == '\0')
-	{
-		if (*nptr == '\0')
-			return (res * sign);
-		res *= 10;
-		res += *nptr++ - '0';
-	}
-	return (0);
+	while (*tab)
+		free(*tab++);
 }

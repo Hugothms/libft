@@ -1,36 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp_rev.c                                   :+:      :+:    :+:   */
+/*   ft_print_tabint.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/21 16:44:42 by hthomas           #+#    #+#             */
-/*   Updated: 2020/03/12 13:43:02 by hthomas          ###   ########.fr       */
+/*   Created: 2020/09/18 14:52:03 by hthomas           #+#    #+#             */
+/*   Updated: 2020/09/18 15:15:48 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp_rev(const char *s1, const char *s2, size_t n)
+void	ft_print_tabint(int *tab, int size)
 {
-	unsigned int	i1;
-	unsigned int	i2;
+	int i;	
 
-	if (!(s1 || s2))
-		return (0);
-	if (!(s1 && s2))
-		return (-1);
-	if (s1 == s2)
-		return (0);
-	i1 = ft_strlen(s1) - 1;
-	i2 = ft_strlen(s2) - 1;
-	while (i1 + 1 && i2 + 1 && s1[i1] == s2[i2] && n--)
+	i = 0;
+	while (i < size)
 	{
-		i1--;
-		i2--;
+		ft_putnbr(tab[i++]);
+		ft_putchar('\n');
 	}
-	if (n)
-		return ((unsigned char)s1[i1] - (unsigned char)s2[i1]);
-	return (0);
 }

@@ -1,16 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_max_float.c                                     :+:      :+:    :+:   */
+/*   ft_strjoin_free.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/25 16:43:12 by hthomas           #+#    #+#             */
-/*   Updated: 2020/03/02 13:37:42 by hthomas          ###   ########.fr       */
+/*   Created: 2020/09/23 18:06:43 by hthomas           #+#    #+#             */
+/*   Updated: 2020/09/23 18:06:46 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-float	ft_max_float(const float a, const float b)
+#include "libft.h"
+
+char	*ft_strjoin_free(char *s1, const char *s2)
 {
-	return (a > b ? a : b);
+	char	*tmp;
+
+	tmp = s1;
+	s1 = ft_strjoin(s1, s2);
+	free(tmp);
+	return (s1);
 }

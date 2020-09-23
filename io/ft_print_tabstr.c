@@ -1,16 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_max_int copy.c                                  :+:      :+:    :+:   */
+/*   ft_print_tabstr.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/25 16:43:12 by hthomas           #+#    #+#             */
-/*   Updated: 2020/02/25 17:42:36 by hthomas          ###   ########.fr       */
+/*   Created: 2020/09/18 14:52:03 by hthomas           #+#    #+#             */
+/*   Updated: 2020/09/18 15:27:28 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_min_int(int a, int b)
+#include "libft.h"
+
+void	ft_print_tabstr(char **tab)
 {
-	return (a < b ? a : b);
+	int i;	
+
+	i = 0;
+	while (tab[i])
+	{
+		ft_putstr(tab[i++]);
+		ft_putchar('\n');
+	}
 }

@@ -1,23 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/28 14:04:58 by hthomas           #+#    #+#             */
-/*   Updated: 2019/12/04 16:37:52 by hthomas          ###   ########.fr       */
+/*   Created: 2020/01/28 13:53:48 by hthomas           #+#    #+#             */
+/*   Updated: 2020/06/24 12:30:56 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-size_t	ft_strlen(const char *str)
+void	ft_swap(void *a, void *b)
 {
-	int i;
+	void	*c;
 
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
+	c = a;
+	a = b;
+	b = c;
 }

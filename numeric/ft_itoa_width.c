@@ -1,20 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*   ft_itoa_width.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/28 13:53:48 by hthomas           #+#    #+#             */
-/*   Updated: 2020/01/28 14:06:30 by hthomas          ###   ########.fr       */
+/*   Created: 2020/02/06 15:56:15 by hthomas           #+#    #+#             */
+/*   Updated: 2020/06/07 11:53:24 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_swap(void *a, void *b)
-{
-	void	*c;
+#include "libft.h"
 
-	c = a;
-	a = b;
-	b = c;
+char	*ft_itoa_width(int nb, int width)
+{
+	char	*res;
+	char	*tmp;
+	int		diff;
+	int		i;
+
+	if (!(res = malloc((width + 1) * sizeof(char))))
+		return (NULL);
+	diff = width - ft_nbrlen(nb);
+	if (diff > 0)
+	{
+		i = 0;
+		while (i < diff)
+			res[i++] = '0';
+	}
+	tmp = ft_itoa(nb);
+	ft_memcpy(res + diff, tmp, ft_nbrlen(nb));
+	free(tmp);
+	return (res);
 }

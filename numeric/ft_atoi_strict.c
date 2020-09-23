@@ -1,26 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_count_len_hex.c                                 :+:      :+:    :+:   */
+/*   ft_atoi_strict.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/01 16:53:02 by hthomas           #+#    #+#             */
-/*   Updated: 2019/12/05 16:43:54 by hthomas          ###   ########.fr       */
+/*   Created: 2019/11/04 16:04:54 by hthomas           #+#    #+#             */
+/*   Updated: 2020/07/03 12:51:25 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int			ft_count_len_hex(unsigned long long hex)
+#include "libft.h"
+
+int	ft_atoi_strict(const char *nptr)
 {
 	int	res;
+	int	sign;
 
 	res = 0;
-	if (hex == 0)
-		return (1);
-	while (hex)
+	sign = 1;
+	while ((*nptr >= '\t' && *nptr <= '\r') || *nptr == ' ')
+		nptr++;
+	if (*nptr == '+' || *nptr == '-')
+		sign *= (*nptr++ == '-' ? -1 : 1);
+	while ((*nptr >= '0' && *nptr <= '9') || *nptr == '\0')
 	{
-		res++;
-		hex /= 16;
+		if (*nptr == '\0')
+			return (res * sign);
+		res *= 10;
+		res += *nptr++ - '0';
 	}
-	return (res);
+	return (-1);
 }

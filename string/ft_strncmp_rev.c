@@ -1,34 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa_width.c                                    :+:      :+:    :+:   */
+/*   ft_strncmp_rev.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/06 15:56:15 by hthomas           #+#    #+#             */
-/*   Updated: 2020/02/06 16:05:25 by hthomas          ###   ########.fr       */
+/*   Created: 2020/02/21 16:44:42 by hthomas           #+#    #+#             */
+/*   Updated: 2020/06/07 11:52:10 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_itoa_width(int nb, int width)
+int	ft_strncmp_rev(const char *s1, const char *s2, size_t n)
 {
-	char	**res;
-	int		diff;
-	int		i;
+	unsigned int	i1;
+	unsigned int	i2;
 
-	if (!(res = malloc(sizeof(*res))))
-		return (NULL);
-	if (!(*res = malloc((width + 1) * sizeof(char))))
-		return (NULL);
-	diff = width - ft_nbrlen(nb);
-	if (diff > 0)
+	if (!(s1 || s2))
+		return (0);
+	if (!(s1 && s2))
+		return (-1);
+	if (s1 == s2)
+		return (0);
+	i1 = ft_strlen(s1) - 1;
+	i2 = ft_strlen(s2) - 1;
+	while (i1 + 1 && i2 + 1 && s1[i1] == s2[i2] && n--)
 	{
-		i = 0;
-		while (i < diff)
-			*res[i++] = '0';
+		i1--;
+		i2--;
 	}
-	ft_memcpy(*res + diff, ft_itoa(nb), ft_nbrlen(nb));
-	return (*res);
+	if (n)
+		return ((unsigned char)s1[i1] - (unsigned char)s2[i1]);
+	return (0);
 }
