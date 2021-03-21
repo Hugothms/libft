@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/10 17:29:35 by hthomas           #+#    #+#             */
-/*   Updated: 2020/11/18 15:50:42 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/03/21 03:24:44 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ static char	*join(int size, char **strs, char *res, char *sep)
 	return (res);
 }
 
-char		*ft_strjoin_sep(int size, char **strs, char *sep)
+char	*ft_strjoin_sep(int size, char **strs, char *sep)
 {
 	char	*res;
 

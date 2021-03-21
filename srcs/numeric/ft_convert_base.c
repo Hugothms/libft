@@ -6,13 +6,13 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/02 08:15:50 by hthomas           #+#    #+#             */
-/*   Updated: 2020/09/30 14:08:40 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/03/21 03:24:53 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
 
-char			*fill_positivenbr_base(long nbr, char *base, char *res, int i)
+char	*fill_positivenbr_base(long nbr, char *base, char *res, int i)
 {
 	int			size;
 
@@ -27,7 +27,7 @@ char			*fill_positivenbr_base(long nbr, char *base, char *res, int i)
 	return (res);
 }
 
-char			*fill_nbr_base(char *res, long nbr, char *base, int sign)
+char	*fill_nbr_base(char *res, long nbr, char *base, int sign)
 {
 	int			i;
 	int			size;
@@ -45,7 +45,7 @@ char			*fill_nbr_base(char *res, long nbr, char *base, int sign)
 	return (res);
 }
 
-char			*ft_strrev_minus_1(char *res)
+char	*ft_strrev_minus_1(char *res)
 {
 	int			i;
 	char		c;
@@ -62,7 +62,7 @@ char			*ft_strrev_minus_1(char *res)
 	return (res);
 }
 
-char			*ft_convert_base(char *nbr, char *base_from, char *base_to)
+char	*ft_convert_base(char *nbr, char *base_from, char *base_to)
 {
 	char		*res;
 	long		nb;

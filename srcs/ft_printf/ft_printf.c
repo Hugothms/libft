@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/27 13:42:33 by hthomas           #+#    #+#             */
-/*   Updated: 2020/10/14 17:15:58 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/03/21 03:24:16 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ char	*ft_conversion(const char *fmt, va_list arg, t_sp *sp, t_f *f)
 	return (NULL);
 }
 
-int		ft_printf_continue(const char *fmt, va_list arg, t_sp *sp)
+int	ft_printf_continue(const char *fmt, va_list arg, t_sp *sp)
 {
 	t_f				*f;
 	char			*str;
@@ -68,7 +68,7 @@ int		ft_printf_continue(const char *fmt, va_list arg, t_sp *sp)
 	return (OK);
 }
 
-int		function(const char *fmt, va_list arg, t_sp *sp)
+int	function(const char *fmt, va_list arg, t_sp *sp)
 {
 	reset_sp(sp);
 	if (fmt[sp->index] == '%')
@@ -84,7 +84,7 @@ int		function(const char *fmt, va_list arg, t_sp *sp)
 	return (OK);
 }
 
-int		ft_printf(const char *fmt, ...)
+int	ft_printf(const char *fmt, ...)
 {
 	va_list	arg;
 	t_sp	*sp;

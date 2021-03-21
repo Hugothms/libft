@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/15 10:20:19 by hthomas           #+#    #+#             */
-/*   Updated: 2021/03/16 08:49:50 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/03/21 03:25:34 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	sort_str(char *tabstr[], int size)
 {
-	int swap;
-	int i;
+	int	swap;
+	int	i;
 
 	swap = 1;
 	while (swap)
