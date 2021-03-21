@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/07 11:28:13 by hthomas           #+#    #+#             */
-/*   Updated: 2021/03/21 03:24:53 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/03/21 03:27:57 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ char	*ft_strrchr(const char *s, int c)
 	while (--i)
 	{
 		if (s[i] == c1)
-			return ((char*)s + i);
+			return ((char *)s + i);
 	}
 	if (s[i] == c1)
-		return ((char*)s + i);
+		return ((char *)s + i);
 	return (NULL);
 }

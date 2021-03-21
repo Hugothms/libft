@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 16:29:33 by hthomas           #+#    #+#             */
-/*   Updated: 2021/03/21 03:24:44 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/03/21 03:27:57 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,7 +100,7 @@ static int	fill_tab(char ***tab, int *words_len, const char *s, char c)
 }
 
 /*
-** split str into a char** each time there is c
+** split str into a char ** each time there is c
 ** @param str	"sentence" that will be splited
 ** @param c		"delimiter" that will delimits the "words"
 ** @return		a tab of "words"
@@ -119,7 +119,7 @@ char	**ft_split(char const *s, char c)
 	if (!(words_len = malloc((count_words(s, c)) * sizeof(int))))
 		return (NULL);
 	words_count = count_words(s, c);
-	if (!(tab = malloc((words_count + 1) * sizeof(char*))))
+	if (!(tab = malloc((words_count + 1) * sizeof(char *))))
 		return (NULL);
 	i = 0;
 	while (i < words_count)

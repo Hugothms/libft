@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/29 17:49:15 by hthomas           #+#    #+#             */
-/*   Updated: 2021/03/21 03:05:09 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/03/21 03:27:57 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ char	*ft_string(va_list arg, t_sp *sp, t_f *f)
 {
 	char	*str;
 
-	sp->s = va_arg(arg, char*);
+	sp->s = va_arg(arg, char *);
 	if (!sp->s)
 	{
 		if (!(str = ft_strdup("(null)")))
