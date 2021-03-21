@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 16:26:35 by hthomas           #+#    #+#             */
-/*   Updated: 2021/03/21 03:24:44 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/03/21 09:11:39 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,8 @@ char	*ft_uitoa(unsigned int n)
 
 	i = 0;
 	nblen = ft_count_len_nbr_ui(n);
-	if (!(str = malloc((nblen + 1) * sizeof(char))))
+	str = malloc((nblen + 1) * sizeof(char));
+	if (!str)
 		return (NULL);
 	fill_str(str, n, i);
 	return (ft_strrev(str));

@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/10 17:29:35 by hthomas           #+#    #+#             */
-/*   Updated: 2021/03/21 03:24:44 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/03/21 09:06:33 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,12 +66,14 @@ char	*ft_strjoin_sep(int size, char **strs, char *sep)
 
 	if (!size)
 	{
-		if (!(res = malloc(1 * sizeof(char))))
+		res = malloc(1 * sizeof(char));
+		if (!res)
 			return (0);
 		*res = 0;
 		return (res);
 	}
-	if (!(res = malloc(count(size, strs, sep) * sizeof(char))))
+	res = malloc(count(size, strs, sep) * sizeof(char));
+	if (!res)
 		return (0);
 	return (join(size, strs, res, sep));
 }

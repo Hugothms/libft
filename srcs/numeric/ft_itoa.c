@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 16:26:35 by hthomas           #+#    #+#             */
-/*   Updated: 2021/03/21 03:24:44 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/03/21 09:14:15 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,8 @@ char	*ft_itoa(int n)
 
 	i = 0;
 	nblen = ft_nbrlen(n);
-	if (!(str = malloc((nblen + 1) * sizeof(char))))
+	str = malloc((nblen + 1) * sizeof(char));
+	if (!str)
 		return (NULL);
 	if (n == -2147483648)
 	{

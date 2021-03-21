@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/02 08:15:50 by hthomas           #+#    #+#             */
-/*   Updated: 2021/03/21 03:24:53 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/03/21 09:15:17 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,9 @@ char	*ft_strrev_minus_1(char *res)
 	char		c;
 	int			len;
 
-	i = (res[0] == '-' ? 1 : 0);
+	i = 0;
+	if (res[0] == '-')
+		i = 1;
 	len = ft_strlen(res) - 1;
 	while (i < len)
 	{
@@ -77,7 +79,8 @@ char	*ft_convert_base(char *nbr, char *base_from, char *base_to)
 		nb *= -1;
 		sign = -1;
 	}
-	if (!(res = malloc((ft_nbrlen(nb) + 1) * sizeof(char))))
+	res = malloc((ft_nbrlen(nb) + 1) * sizeof(char));
+	if (!res)
 		return (0);
 	fill_nbr_base(res, nb, base_to, sign);
 	return (ft_strrev_minus_1(res));

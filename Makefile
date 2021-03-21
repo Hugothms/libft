@@ -6,7 +6,7 @@
 #    By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/04 11:49:24 by hthomas           #+#    #+#              #
-#    Updated: 2021/03/15 10:27:29 by hthomas          ###   ########.fr        #
+#    Updated: 2021/03/21 10:10:31 by hthomas          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -137,6 +137,7 @@ SRCS 		+= 	srcs/ft_printf/ft_printf.c					\
 				srcs/ft_printf/ft_hex.c						\
 				srcs/ft_printf/ft_integer.c					\
 				srcs/ft_printf/ft_integer2.c				\
+				srcs/ft_printf/ft_integer3.c				\
 				srcs/ft_printf/ft_pointer.c					\
 				srcs/ft_printf/ft_string.c					\
 				srcs/ft_printf/ft_unsigned_int.c			\

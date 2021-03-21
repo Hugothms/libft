@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/02 08:16:10 by hthomas           #+#    #+#             */
-/*   Updated: 2021/03/21 03:27:57 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/03/21 09:10:12 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,8 @@ static int	fill_tab(char **tab, int *words_len, const char *str, char *charset)
 	words_count = count_words(str, charset);
 	while (d1 < words_count && str[i_str])
 	{
-		if (!(tab[d1] = malloc((words_len[d1] + 1) * sizeof(char))))
+		tab[d1] = malloc((words_len[d1] + 1) * sizeof(char));
+		if (!tab[d1])
 			return (0);
 		while (ft_in_charset(str[i_str], charset))
 			i_str++;
@@ -103,13 +104,18 @@ char	**ft_split_set(const char *str, char *charset)
 {
 	char	**tab;
 	int		words_count;
-	int		words_len[count_words(str, charset)];
+	int		*words_len;
 	int		i;
 
 	if (!str)
 		return (0);
 	words_count = count_words(str, charset);
-	if (!(tab = malloc((words_count + 1) * sizeof(char *))))
+	words_len = malloc((words_count) * sizeof(int));
+	if (!words_len)
+		return (0);
+	words_count = count_words(str, charset);
+	tab = malloc((words_count + 1) * sizeof(char *));
+	if (!tab)
 		return (0);
 	i = 0;
 	while (i < words_count)

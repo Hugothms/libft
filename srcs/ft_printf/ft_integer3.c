@@ -1,36 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_integer3.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/11 16:49:16 by hthomas           #+#    #+#             */
-/*   Updated: 2021/03/21 09:24:48 by hthomas          ###   ########.fr       */
+/*   Created: 2021/03/21 10:10:00 by hthomas           #+#    #+#             */
+/*   Updated: 2021/03/21 10:11:03 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/libft.h"
+#include "../../includes/ft_printf.h"
 
-/*
-** Counts the number of nodes in a list
-** @param lst	The beginning of the list
-** @return		Length of the list
-*/
-
-int	ft_lstsize(t_list *lst)
+char	*precision_sign(char *str, t_f *f)
 {
-	int		cpt;
-	t_list	*pt;
-
-	if (!lst)
-		return (0);
-	cpt = 1;
-	pt = lst;
-	while (pt)
+	if (f->space || f->plus)
 	{
-		pt = pt->next;
-		cpt++;
+		free(str);
+		str = ft_chardup('\0');
+		if (!str)
+			return (NULL);
 	}
-	return (cpt);
+	else
+	{
+		free(str);
+		str = ft_chardup('\0');
+		if (!str)
+			return (NULL);
+	}
+	return (str);
 }

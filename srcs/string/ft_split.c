@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 16:29:33 by hthomas           #+#    #+#             */
-/*   Updated: 2021/03/21 03:27:57 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/03/21 09:08:38 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,8 @@ static int	fill_tab(char ***tab, int *words_len, const char *s, char c)
 	words_count = count_words(s, c);
 	while (d1 < words_count && s[i_s])
 	{
-		if (!((*tab)[d1] = malloc((words_len[d1] + 1) * sizeof(char))))
+		(*tab)[d1] = malloc((words_len[d1] + 1) * sizeof(char));
+		if (!(*tab)[d1])
 			return (free_tab(*tab, d1));
 		while (s[i_s] == c)
 			i_s++;
@@ -116,10 +117,12 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (NULL);
-	if (!(words_len = malloc((count_words(s, c)) * sizeof(int))))
+	words_len = malloc((count_words(s, c)) * sizeof(int));
+	if (!words_len)
 		return (NULL);
 	words_count = count_words(s, c);
-	if (!(tab = malloc((words_count + 1) * sizeof(char *))))
+	tab = malloc((words_count + 1) * sizeof(char *));
+	if (!tab)
 		return (NULL);
 	i = 0;
 	while (i < words_count)

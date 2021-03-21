@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/08 16:33:41 by hthomas           #+#    #+#             */
-/*   Updated: 2021/03/16 08:21:42 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/03/21 09:27:35 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,7 @@ void	ft_dlstclear(t_dlist **adlst, t_dlist *dlst, void (*del)(void*))
 	if (!(*adlst) || !dlst)
 		return ;
 	if (dlst->next != *adlst)
-	{
 		ft_dlstclear(adlst, dlst->next, del);
-		// free(dlst->next);
-	}
 	ft_dlstdelone(dlst, del);
 	dlst = NULL;
 }

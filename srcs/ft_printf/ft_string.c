@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/29 17:49:15 by hthomas           #+#    #+#             */
-/*   Updated: 2021/03/21 03:27:57 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/03/21 09:49:56 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ char	*ft_precision_string(char *str, t_sp *sp, t_f *f)
 		if (!sp->s && !f->pr)
 		{
 			free(str);
-			if (!(str = ft_chardup('\0')))
+			str = ft_chardup('\0');
+			if (!str)
 				return (NULL);
 		}
 		else
@@ -31,6 +32,17 @@ char	*ft_precision_string(char *str, t_sp *sp, t_f *f)
 	return (str);
 }
 
+char	*ft_string2(t_f *f, char *str)
+{
+	if (f->zero && !f->minus)
+		str = ft_cat(f->minus, str, f->width, '0' );
+	else
+		str = ft_cat(f->minus, str, f->width, ' ');
+	if (!str)
+		return (NULL);
+	return (str);
+}
+
 char	*ft_string(va_list arg, t_sp *sp, t_f *f)
 {
 	char	*str;
@@ -38,20 +50,23 @@ char	*ft_string(va_list arg, t_sp *sp, t_f *f)
 	sp->s = va_arg(arg, char *);
 	if (!sp->s)
 	{
-		if (!(str = ft_strdup("(null)")))
+		str = ft_strdup("(null)");
+		if (!str)
 			return (NULL);
 	}
 	else
 	{
-		if (!(str = ft_strdup(sp->s)))
+		str = ft_strdup(sp->s);
+		if (!str)
 			return (NULL);
 	}
-	if (!(str = ft_precision_string(str, sp, f)))
+	str = ft_precision_string(str, sp, f);
+	if (!str)
 		return (NULL);
 	if (f->width)
 	{
-		if (!(str = ft_cat(f->minus, str, f->width,
-		f->zero && !f->minus ? '0' : ' ')))
+		str = ft_string2(f, str);
+		if (!str)
 			return (NULL);
 	}
 	return (str);

@@ -6,11 +6,11 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 15:51:36 by hthomas           #+#    #+#             */
-/*   Updated: 2021/03/21 03:24:16 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/03/21 09:10:59 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_in_charset(char const c, char const *charset)
+int	ft_in_charset(char const c, char const *charset)
 {
 	int	i_charset;
 

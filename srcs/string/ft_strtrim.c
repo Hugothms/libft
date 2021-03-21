@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 16:30:13 by hthomas           #+#    #+#             */
-/*   Updated: 2021/03/21 03:24:44 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/03/21 09:05:00 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,8 @@ char	*ft_strtrim(char const *str, char const *set)
 	if (!str)
 		return (NULL);
 	size = count_size(str, set);
-	if (!(new = malloc((size + 1) * sizeof(char))))
+	new = malloc((size + 1) * sizeof(char));
+	if (!new)
 		return (NULL);
 	if (!size)
 	{
