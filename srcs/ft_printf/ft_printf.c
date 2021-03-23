@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/27 13:42:33 by hthomas           #+#    #+#             */
-/*   Updated: 2021/03/21 09:44:58 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/03/23 12:56:19 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ char	*ft_conversion(const char *fmt, va_list arg, t_sp *sp, t_f *f)
 	return (NULL);
 }
 
-int	ft_printf_continue(const char *fmt, va_list arg, t_sp *sp)
+int	ft_printf3(const char *fmt, va_list arg, t_sp *sp)
 {
 	t_f				*f;
 	char			*str;
@@ -69,12 +69,12 @@ int	ft_printf_continue(const char *fmt, va_list arg, t_sp *sp)
 	return (OK);
 }
 
-int	function(const char *fmt, va_list arg, t_sp *sp)
+int	ft_printf2(const char *fmt, va_list arg, t_sp *sp)
 {
 	reset_sp(sp);
 	if (fmt[sp->index] == '%')
 	{
-		if (ft_printf_continue(fmt, arg, sp))
+		if (ft_printf3(fmt, arg, sp))
 			return (ERR);
 	}
 	else
@@ -97,7 +97,7 @@ int	ft_printf(const char *fmt, ...)
 		return (ERR);
 	while (fmt[sp->index])
 	{
-		if (function(fmt, arg, sp))
+		if (ft_printf2(fmt, arg, sp))
 			return (ERR);
 		sp->index++;
 	}
