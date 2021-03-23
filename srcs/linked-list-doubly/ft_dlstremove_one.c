@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/09 09:56:00 by hthomas           #+#    #+#             */
-/*   Updated: 2021/03/21 09:26:49 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/03/23 11:46:56 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 /*
 ** Remove the node 'dlst' of the list and return it.
 ** @param dlst	The address of the node to remove from the list.
+** @return		The address of the node removed from the list.
 */
 
 t_dlist	*ft_dlstremove_one(t_dlist **adlst, t_dlist *dlst)
@@ -26,7 +27,7 @@ t_dlist	*ft_dlstremove_one(t_dlist **adlst, t_dlist *dlst)
 		if (*adlst == (*adlst)->next)
 		{
 			*adlst = NULL;
-			return (NULL);
+			return (dlst);
 		}
 		*adlst = dlst->next;
 	}
