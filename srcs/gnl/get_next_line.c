@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/30 13:12:56 by hthomas           #+#    #+#             */
-/*   Updated: 2021/03/21 03:25:29 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/03/24 09:47:06 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,4 +45,30 @@ int	get_next_line(char **out, int fd)
 	ret = 1;
 	*out = recurs(0, &ret, fd);
 	return (ret);
+}
+
+int	main_gnl(int argc, char **argv)
+{
+	int		fd;
+	char	*line;
+	int		ret;
+
+	if (argc == 2)
+		fd = open((argv[1]), O_RDONLY);
+	else
+		fd = 0;
+	ret = get_next_line(&line, fd);
+	while (ret == 1)
+	{
+		ft_printf("\nret: %d\nline = |%s|\n", ret, line);
+		free(line);
+		ret = get_next_line(&line, fd);
+	}
+	if (ret == 0)
+		ft_printf("\nret: %d\nline = |%s|\n", ret, line);
+	else if (ret == -1)
+		ft_printf("\nret: %d\nline = |%s|\n", ret, line);
+	free(line);
+	close(fd);
+	return (0);
 }
