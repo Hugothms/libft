@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/08 16:34:17 by hthomas           #+#    #+#             */
-/*   Updated: 2021/03/21 09:27:56 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/03/24 11:20:15 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@
 ** @param content The content to create the new node with
 ** @return			The new node
 */
-
 t_dlist	*ft_dlstnew(void *content)
 {
 	t_dlist	*new;

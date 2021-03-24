@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/11 16:49:44 by hthomas           #+#    #+#             */
-/*   Updated: 2021/03/13 11:16:02 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/03/24 11:20:15 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 ** @param alst	The address of a pointer to the first link of a list.
 ** @param new	The address of a pointer to the node to be added to the list.
 */
-
 void	ft_lstadd_back(t_list **alst, t_list *new)
 {
 	t_list	*pt;

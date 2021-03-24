@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 16:30:13 by hthomas           #+#    #+#             */
-/*   Updated: 2021/03/21 09:05:00 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/03/24 11:20:15 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@ static int	count_size(char const *str, char const *set)
 ** @param set	set of chars to remove from str
 ** @return		the str trimed
 */
-
 char	*ft_strtrim(char const *str, char const *set)
 {
 	int		i;
