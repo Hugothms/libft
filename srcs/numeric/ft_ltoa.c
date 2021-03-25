@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 16:26:35 by hthomas           #+#    #+#             */
-/*   Updated: 2021/03/21 09:13:47 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/03/25 16:42:58 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ static void	fill_str(char *str, long n, int i)
 	str[i] = '\0';
 }
 
-char	*ft_ltoa(long n)
+char		*ft_ltoa(long n)
 {
 	char	*str;
 	int		i;

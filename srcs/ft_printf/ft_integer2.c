@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/29 17:49:15 by hthomas           #+#    #+#             */
-/*   Updated: 2021/03/21 10:12:08 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/03/25 16:44:22 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ char	*width_integer(char *str, t_sp *sp, t_f *f)
 	return (str);
 }
 
-int	keep_position_sign2(char *str, int condition, int *fdf)
+int		keep_position_sign2(char *str, int condition, int *fdf)
 {
 	int		idf;
 

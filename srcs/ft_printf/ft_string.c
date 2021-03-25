@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/29 17:49:15 by hthomas           #+#    #+#             */
-/*   Updated: 2021/03/21 09:49:56 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/03/25 16:46:21 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ char	*ft_precision_string(char *str, t_sp *sp, t_f *f)
 char	*ft_string2(t_f *f, char *str)
 {
 	if (f->zero && !f->minus)
-		str = ft_cat(f->minus, str, f->width, '0' );
+		str = ft_cat(f->minus, str, f->width, '0');
 	else
 		str = ft_cat(f->minus, str, f->width, ' ');
 	if (!str)

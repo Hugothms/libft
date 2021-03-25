@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 16:29:42 by hthomas           #+#    #+#             */
-/*   Updated: 2021/03/24 11:20:15 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/03/25 16:42:07 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 ** @param s2	second string
 ** @return		joined string
 */
+
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*new;

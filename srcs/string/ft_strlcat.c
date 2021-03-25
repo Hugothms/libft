@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/28 20:09:51 by hthomas           #+#    #+#             */
-/*   Updated: 2021/03/21 09:06:04 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/03/25 16:43:07 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static size_t	ft_strnlen(const char *str, size_t sizemax)
 	return (i);
 }
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+size_t			ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	lensrc;
 	size_t	lendst;

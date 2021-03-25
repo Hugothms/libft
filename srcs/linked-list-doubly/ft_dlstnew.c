@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/08 16:34:17 by hthomas           #+#    #+#             */
-/*   Updated: 2021/03/24 11:20:15 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/03/25 16:45:00 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,12 @@
 /*
 ** Allocates (with malloc(3)) and returns a new node.
 ** The variable ’content’ is initialized with the value of the
-**  parameter ’content’. 
+**  parameter ’content’.
 ** The variables ’next’ and 'prev' are initialized to NULL.
 ** @param content The content to create the new node with
 ** @return			The new node
 */
+
 t_dlist	*ft_dlstnew(void *content)
 {
 	t_dlist	*new;

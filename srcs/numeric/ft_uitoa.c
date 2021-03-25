@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 16:26:35 by hthomas           #+#    #+#             */
-/*   Updated: 2021/03/21 09:11:39 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/03/25 16:42:54 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ static void	fill_str(char *str, unsigned int n, int i)
 	str[i] = '\0';
 }
 
-char	*ft_uitoa(unsigned int n)
+char		*ft_uitoa(unsigned int n)
 {
 	char	*str;
 	int		i;

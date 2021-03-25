@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/08 16:34:09 by hthomas           #+#    #+#             */
-/*   Updated: 2021/03/24 11:20:15 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/03/25 16:43:30 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@
 **				 node if needed.
 ** @return		The new list. NULL if the allocation fails.
 */
+
 t_dlist	*ft_dlstmap(t_dlist *dlst, void *(*f)(void *), void (*del)(void *))
 {
 	t_dlist	*tmp;

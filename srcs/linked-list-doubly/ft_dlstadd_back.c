@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/08 16:32:54 by hthomas           #+#    #+#             */
-/*   Updated: 2021/03/24 11:20:15 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/03/25 16:40:04 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 ** @param adlst	The address of a pointer to the first node of a list.
 ** @param new	The address of a pointer to the node to be added to the list.
 */
+
 void	ft_dlstadd_back(t_dlist **adlst, t_dlist *new)
 {
 	t_dlist	*tmp;

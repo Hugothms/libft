@@ -6,13 +6,13 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/02 08:15:50 by hthomas           #+#    #+#             */
-/*   Updated: 2021/03/21 09:11:24 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/03/25 16:43:47 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
 
-int	ft_count_len_nbr_ui(unsigned int n, char *base_to)
+int		ft_count_len_nbr_ui(unsigned int n, char *base_to)
 {
 	int		res;
 

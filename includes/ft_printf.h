@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/27 13:44:08 by hthomas           #+#    #+#             */
-/*   Updated: 2021/03/24 09:51:41 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/03/25 16:47:36 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 # define OK 0
 # define NB_CONV 10
 
-typedef struct s_printf
+typedef struct		s_printf
 {
 	int				index;
 	int				len;
@@ -33,7 +33,7 @@ typedef struct s_printf
 	unsigned int	h;
 }					t_sp;
 
-typedef struct s_flags
+typedef struct		s_flags
 {
 	int				zero;
 	int				minus;

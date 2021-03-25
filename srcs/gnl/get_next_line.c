@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/30 13:12:56 by hthomas           #+#    #+#             */
-/*   Updated: 2021/03/24 09:47:06 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/03/25 16:40:27 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ char	*recurs(int depth, int *ret, int fd)
 	return (out);
 }
 
-int	get_next_line(char **out, int fd)
+int		get_next_line(char **out, int fd)
 {
 	int	ret;
 
@@ -47,7 +47,7 @@ int	get_next_line(char **out, int fd)
 	return (ret);
 }
 
-int	main_gnl(int argc, char **argv)
+int		main_gnl(int argc, char **argv)
 {
 	int		fd;
 	char	*line;
