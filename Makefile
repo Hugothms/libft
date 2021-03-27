@@ -6,12 +6,12 @@
 #    By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/04 11:49:24 by hthomas           #+#    #+#              #
-#    Updated: 2021/03/21 10:10:31 by hthomas          ###   ########.fr        #
+#    Updated: 2021/03/27 17:42:20 by hthomas          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME 		= 	libft.a
-OBJS		=	${SRCS:.c=.o}
+OBJS		=	$(SRCS:.c=.o)
 INCLUDES	=	includes
 HEADER		=	$(INCLUDES)/libft.h
 CC			=	gcc
@@ -155,13 +155,12 @@ OPTI = -Ofast #-O3
 
 all:		$(NAME)
 
-$(NAME):	${OBJS} $(HEADER)
-	ar rc	$(NAME) ${OBJS}
+$(NAME):	$(OBJS) $(HEADER)
+	ar rc	$(NAME) $(OBJS)
 	ranlib	$(NAME)
 
-.c.o:
-	${CC} -c ${CFLAGS} -I. -o $@ $<
-	@# printf "$(GREEN)█"
+%.o:		%.c $(HEADER)
+	$(CC) -c $(CFLAGS) -I $(INCLUDES) -o $@ $<
 
 clean:
 	rm -f $(OBJS)
