@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/30 13:12:56 by hthomas           #+#    #+#             */
-/*   Updated: 2021/03/25 16:40:27 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/06 14:37:04 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*recurs(int depth, int *ret, int fd)
 	int		test;
 
 	test = read(fd, buff, 1);
-	if (test == 0)
+	if (!test)
 		buff[0] = 0;
 	if (buff[0] == '\n' || buff[0] == 0)
 	{
