@@ -45,6 +45,7 @@ SRCS		+=	srcs/linked-list/ft_lstnew.c				\
 				srcs/linked-list/ft_lstclear.c				\
 				srcs/linked-list/ft_lstiter.c				\
 				srcs/linked-list/ft_lstmap.c				\
+				srcs/linked-list/ft_lstremove_one.c			\
 
 # linked-list-doubly
 SRCS		+=	srcs/linked-list-doubly/ft_dlstnew.c		\
