@@ -6,13 +6,13 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/30 13:12:56 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/06 14:37:04 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/06/17 15:04:44 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
 
-char	*recurs(int depth, int *ret, int fd)
+static char	*recurs(int depth, int *ret, int fd)
 {
 	char	buff[1];
 	char	*out;
@@ -38,7 +38,7 @@ char	*recurs(int depth, int *ret, int fd)
 	return (out);
 }
 
-int		get_next_line(char **out, int fd)
+int	get_next_line(char **out, int fd)
 {
 	int	ret;
 
@@ -47,7 +47,7 @@ int		get_next_line(char **out, int fd)
 	return (ret);
 }
 
-int		main_gnl(int argc, char **argv)
+int	main_gnl(int argc, char **argv)
 {
 	int		fd;
 	char	*line;

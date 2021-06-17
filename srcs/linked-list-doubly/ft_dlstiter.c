@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/08 16:33:57 by hthomas           #+#    #+#             */
-/*   Updated: 2021/03/25 16:40:04 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/06/17 14:55:33 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 ** @param dlst	The adress of a pointer to an node.
 ** @param f		The adress of the function used to iterate on the list.
 */
-
 void	ft_dlstiter(t_dlist *dlst, void (*f)(void *))
 {
 	t_dlist	*tmp;

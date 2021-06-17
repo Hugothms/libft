@@ -6,13 +6,13 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/29 17:49:15 by hthomas           #+#    #+#             */
-/*   Updated: 2021/06/17 14:49:38 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/06/17 14:57:22 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/ft_printf.h"
 
-void	ft_write_n(t_sp *sp, int n, char c)
+static void	ft_write_n(t_sp *sp, int n, char c)
 {
 	while (n--)
 	{

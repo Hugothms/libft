@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/02 08:16:10 by hthomas           #+#    #+#             */
-/*   Updated: 2021/03/25 16:42:38 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/06/17 14:56:44 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,8 +99,7 @@ static int	fill_tab(char **tab, int *words_len, const char *str, char *charset)
 ** @param charset	set of "delimiters" that will delimits the "words"
 ** @return			a tab of "words"
 */
-
-char		**ft_split_set(const char *str, char *charset)
+char	**ft_split_set(const char *str, char *charset)
 {
 	char	**tab;
 	int		words_count;

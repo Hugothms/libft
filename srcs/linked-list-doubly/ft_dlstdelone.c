@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/08 16:33:49 by hthomas           #+#    #+#             */
-/*   Updated: 2021/03/25 16:40:04 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/06/17 14:55:30 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@
 ** @param del	The adress of the function used to delete the content of the
 **				 node.
 */
-
 void	ft_dlstdelone(t_dlist *dlst, void (*del)(void*))
 {
 	if (!dlst)

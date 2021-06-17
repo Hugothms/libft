@@ -20,7 +20,6 @@
 ** @param del	The adress of the function used to delete the content of the
 **				 node.
 */
-
 void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
 	if (!lst)

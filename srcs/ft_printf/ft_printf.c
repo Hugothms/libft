@@ -6,13 +6,13 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/27 13:42:33 by hthomas           #+#    #+#             */
-/*   Updated: 2021/03/25 16:44:03 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/06/17 15:02:18 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/ft_printf.h"
 
-void	fill_ftab(t_fptr *ftab)
+static void	fill_ftab(t_fptr *ftab)
 {
 	ftab[0] = &ft_char;
 	ftab[1] = &ft_string;
@@ -26,7 +26,7 @@ void	fill_ftab(t_fptr *ftab)
 	ftab[9] = &ft_flag_n;
 }
 
-char	*ft_conversion(const char *fmt, va_list arg, t_sp *sp, t_f *f)
+static char	*ft_conversion(const char *fmt, va_list arg, t_sp *sp, t_f *f)
 {
 	t_fptr	ftab[NB_CONV];
 	char	*conversions;
@@ -49,7 +49,7 @@ char	*ft_conversion(const char *fmt, va_list arg, t_sp *sp, t_f *f)
 	return (NULL);
 }
 
-int		ft_printf3(const char *fmt, va_list arg, t_sp *sp)
+static int	ft_printf3(const char *fmt, va_list arg, t_sp *sp)
 {
 	t_f				*f;
 	char			*str;
@@ -69,7 +69,7 @@ int		ft_printf3(const char *fmt, va_list arg, t_sp *sp)
 	return (OK);
 }
 
-int		ft_printf2(const char *fmt, va_list arg, t_sp *sp)
+static int	ft_printf2(const char *fmt, va_list arg, t_sp *sp)
 {
 	reset_sp(sp);
 	if (fmt[sp->index] == '%')
@@ -85,7 +85,7 @@ int		ft_printf2(const char *fmt, va_list arg, t_sp *sp)
 	return (OK);
 }
 
-int		ft_printf(const char *fmt, ...)
+int	ft_printf(const char *fmt, ...)
 {
 	va_list	arg;
 	t_sp	*sp;

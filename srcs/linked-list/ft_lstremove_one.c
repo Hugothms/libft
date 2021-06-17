@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/09 09:56:00 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/07 10:42:07 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/06/17 14:55:22 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 ** @param lst	The address of the node to remove from the list.
 ** @return		The address of the node removed from the list.
 */
-
 t_list	*ft_lstremove_one(t_list **alst, t_list *lst)
 {
 	t_list	*tmp;

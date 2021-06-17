@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/11 16:49:16 by hthomas           #+#    #+#             */
-/*   Updated: 2021/03/25 16:43:40 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/06/17 14:55:09 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 ** @param lst	The beginning of the list
 ** @return		Length of the list
 */
-
 int	ft_lstsize(t_list *lst)
 {
 	int		cpt;
